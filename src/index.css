@@ -1,0 +1,282 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --black-gradient: linear-gradient(
+    144.39deg,
+    #ffffff -278.56%,
+    #6d6d6d -78.47%,
+    #11101d 91.61%
+  );
+  --card-shadow: 0px 20px 100px -10px rgba(66, 71, 91, 0.1);
+}
+
+* {
+  scroll-behavior: smooth;
+}
+.toggle-label {
+  display: block;
+  position: relative;
+  width: 2.8em;
+  height: 1.6em;
+  border-radius: 1em;
+  background-color: #ddd;
+  transition: background-color 0.3s;
+}
+
+.rounded-image {
+  border-radius: 400px; /* Ajustez la valeur du border-radius selon vos besoins */
+}
+
+.toggle-label::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0.2em;
+  left: 0.2em;
+  width: 1.2em;
+  height: 1.2em;
+  border-radius: 1em;
+  background-color: white;
+  box-shadow: 0 0.1em 0.3em rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s;
+}
+
+.toggle-checkbox:checked + .toggle-label {
+  background-color: orange;
+}
+
+.toggle-checkbox:checked + .toggle-label::before {
+  transform: translateX(1.2em);
+}
+
+.text-gradient {
+  background: radial-gradient(
+    64.18% 64.18% at 71.16% 35.69%,
+    #ffcccc 0.89%,
+    #ff9999 17.23%,
+    #ff6666 42.04%,
+    #ff3333 55.12%,
+    #ff0000 71.54%,
+    #cc0000 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.bg-blue-gradient {
+  background: linear-gradient(
+    157.81deg,
+    #ffcccc 0.89%,
+    #ff9999 17.23%,
+    #ff6666 42.04%,
+    #ff3333 55.12%,
+    #ff0000 71.54%,
+    #cc0000 100%
+  );
+}
+
+.bg-black-gradient {
+  background: linear-gradient(
+    144.39deg,
+    #ffffff -278.56%,
+    #6d6d6d -78.47%,
+    #11101d 91.61%
+  );
+}
+
+.bg-black-gradient-2 {
+  background: linear-gradient(
+    -168.39deg,
+    #ffffff -278.56%,
+    #6d6d6d -78.47%,
+    #11101d 91.61%
+  );
+}
+
+.bg-gray-gradient {
+  background: linear-gradient(
+    153.47deg,
+    rgba(255, 255, 255, 0) -341.94%,
+    #14101d 95.11%
+  );
+}
+
+.bg-discount-gradient {
+  background: linear-gradient(125.17deg, #272727 0%, #11101d 100%);
+}
+
+.box-shadow {
+  box-shadow: 0px 20px 100px -10px rgba(66, 71, 91, 0.1);
+}
+
+.sidebar {
+  -webkit-animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@-webkit-keyframes slide-top {
+  0% {
+    -webkit-transform: translateY(100px);
+    transform: translateY(100px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-top {
+  0% {
+    -webkit-transform: translateY(100px);
+    transform: translateY(100px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+.feature-card:hover {
+  background: var(--black-gradient);
+  box-shadow: var(--card-shadow);
+}
+
+.feedback-container .feedback-card:last-child {
+  margin-right: 0px;
+}
+
+.feedback-card {
+  background: transparent;
+}
+
+.feedback-card:hover {
+  background: var(--black-gradient);
+}
+
+.blue__gradient {
+  background: linear-gradient(180deg, rgba(188, 165, 255, 0) 0%, #214d76 100%);
+  filter: blur(123px);
+}
+
+.pink__gradient {
+  background: linear-gradient(90deg, #f96e1e 0%, #0c2ad8 100%);
+  filter: blur(900px);
+}
+
+.white__gradient {
+  background: rgba(255, 255, 255, 0.6);
+  filter: blur(750px);
+}
+
+/* Import Google Fonts */
+@import "https://fonts.googleapis.com/css2?family=Montserrat";
+
+/* Reset and general styles */
+*, body {
+  font-family: Montserrat, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+div.container div#items div.item a button.color {
+  border-color: white; /* Couleur de la bordure */
+  color: white; /* Couleur du texte */
+}
+
+div.container div#items div.item div.infos h4 span {
+  color: black; /* Couleur du texte */
+}
+
+body {
+  background: var(--medium-light);
+  color: var(--dark);
+  font-size: 14px;
+}
+
+/* Card styles */
+.item {
+  background: var(--white);
+  width: auto;
+  max-width: 450px;
+  min-width: 280px;
+  height: auto;
+  color: var(--medium-gray);
+  font-size: 17px;
+  text-align: center;
+  padding: 25px 25px 0;
+  box-shadow: 0 2px 5px rgb(255, 255, 255);
+  border-radius: 14px;
+  margin: 30px;
+  flex: 1 1;
+  overflow: hidden;
+  position: relative;
+}
+
+.item img {
+  max-width: 150px;
+  max-height: 150px;
+}
+
+.item h3 {
+  color: var(--main);
+  font-size: 26px;
+  padding: 10px;
+}
+
+.infos {
+  font-size: 22px;
+  text-align: left;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-top: 6px dashed var(--text-gray);
+  border-bottom: 2px dashed var(--text-gray);
+  margin-bottom: 15px;
+}
+
+.infos h4 {
+  background: rgb(255, 255, 255);
+  width: 100%;
+  color: var(--medium-gray);
+  font-size: 20px;
+  text-align: center;
+  padding: 8px;
+  border-radius: 6px;
+  margin-bottom: 15px;
+}
+
+
+.infos .processor {
+  background: url(./assets/infos.png) no-repeat !important;
+}
+
+.infos .ram {
+  background: url(./assets/infos.png) 0 -30px no-repeat !important;
+}
+
+.infos .storage {
+  background: url(./assets/infos.png) 0 -60px no-repeat !important;
+}
+
+.infos .ideal {
+  background: url(./assets/infos.png) 0 -150px no-repeat !important;
+}
+
+.enditem {
+  background: var(--main-one);
+  background-image: linear-gradient(to right, var(--main-one), var(--main-two));
+  background-image: -webkit-linear-gradient(left, var(--main-one), var(--main-two));
+  background-attachment: fixed;
+  width: auto;
+  height: 5px;
+  margin-top: 20px;
+  margin-left: -25px;
+  margin-right: -25px;
+}
+
+
